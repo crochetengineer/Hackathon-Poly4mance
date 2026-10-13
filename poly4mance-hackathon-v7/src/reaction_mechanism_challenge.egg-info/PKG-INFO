@@ -1,0 +1,10 @@
+Metadata-Version: 2.4
+Name: reaction-mechanism-challenge
+Version: 1.0.0
+Summary: Closed candidate library and reference solution for the mechanism-discovery challenge
+Requires-Python: >=3.10
+Requires-Dist: numpy==2.2.6
+Requires-Dist: scipy==1.15.3
+Requires-Dist: pandas==2.3.3
+Requires-Dist: matplotlib==3.10.9
+Requires-Dist: pyyaml==6.0.3

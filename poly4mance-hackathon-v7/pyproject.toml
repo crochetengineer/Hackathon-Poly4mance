@@ -1,0 +1,39 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "reaction-mechanism-challenge"
+version = "1.0.0"
+description = "Closed candidate library and reference solution for the mechanism-discovery challenge"
+requires-python = ">=3.10"
+dependencies = [
+    "numpy==2.2.6",
+    "scipy==1.15.3",
+    "pandas==2.3.3",
+    "matplotlib==3.10.9",
+    "pyyaml==6.0.3",
+]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.ruff]
+line-length = 120
+target-version = "py310"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "W", "UP", "B"]
+ignore = [
+    "E741",  # ambiguous name 'I' -- I is a chemical species label here
+    "B905",  # zip() without strict= -- lengths are known-equal here
+    "E702",  # multiple statements on a line -- used deliberately in compact plotting code
+]
+
+[tool.ruff.lint.per-file-ignores]
+# baseline scripts set up the src-layout import before importing, hence E402
+"baseline/*.py" = ["E402"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"

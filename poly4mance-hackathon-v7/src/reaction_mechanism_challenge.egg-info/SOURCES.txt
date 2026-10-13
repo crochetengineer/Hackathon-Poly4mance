@@ -1,0 +1,11 @@
+README.md
+pyproject.toml
+src/candidates/__init__.py
+src/candidates/models.py
+src/candidates/simulate.py
+src/reaction_mechanism_challenge.egg-info/PKG-INFO
+src/reaction_mechanism_challenge.egg-info/SOURCES.txt
+src/reaction_mechanism_challenge.egg-info/dependency_links.txt
+src/reaction_mechanism_challenge.egg-info/requires.txt
+src/reaction_mechanism_challenge.egg-info/top_level.txt
+tests/test_candidates.py
